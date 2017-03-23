@@ -1,8 +1,8 @@
-float t = 50;
+1float t = 50;
 
 void setup()
 {
-  size(4000, 4000);
+  size(1000, 1000);
 }
 
 void draw()
