@@ -1,0 +1,5 @@
+<title>404notfound!</title>
+<h1>deze pagina bestaat niet!</title>
+<form method="get" action="home">
+    <button type="submit">terug naar de homepage</button>
+</form>
