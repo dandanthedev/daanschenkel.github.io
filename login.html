@@ -1,0 +1,15 @@
+<input type="text" id="login" required>
+    <input type="text" id="password" required>
+    <input type="button" id="goButton" onclick="checkLoginPass()" />
+    <script>
+        var checkLoginPass = function () {
+            var login = document.getElementById("login").value;
+            var pass = document.getElementById("password").value;
+            if (login === "userdaansite" && pass === "userDaanSiteGithub123") {
+                window.location.replace("daantje1.github.io/home.html");
+            }
+            else {
+                window.alert("probeer het opnieuw!")
+            }
+        }
+    </script>
