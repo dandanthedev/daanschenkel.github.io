@@ -1,12 +1,25 @@
 <html>
-<p> Enter Username and Password </p>
-<FORM action="home.html" method="post">
-    <P>
-    <LABEL for="firstname">Username </LABEL>
-              <INPUT type="text" id="userdaansite"><BR>
-    <LABEL for="lastname">Password </LABEL>
-              <INPUT type="text" id="daansite123"><BR>
-        <INPUT type="submit" value="Send"> <INPUT type="reset">
-    </P>
- </FORM>
+    <head>
+        <title>Login page</title>
+    </head>
+    <body>
+        <h1>daansite Login Page</h1>
+        <form name="login">
+            Username<input type="text" name="gebruikersnaam"/>
+            Password<input type="password" name="wachtwoord"/>
+            <input type="button" onclick="check(this.form)" value="Login"/>
+            <input type="reset" value="Cancel"/>
+        </form>
+        <script language="javascript">
+            function check(form) { /*function to check userid & password*/
+                /*the following code checkes whether the entered userid and password are matching*/
+                if(form.gebruikersnaam.value == "daansite" && form.wachtwoord.value == "daansite123") {
+                    window.open('home.html')/*opens the target page while Id & password matches*/
+                }
+                else {
+                    alert("niet goed ingevuld")/*displays error message*/
+                }
+            }
+        </script>
+    </body>
 </html>
