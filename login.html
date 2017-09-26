@@ -29,6 +29,24 @@
 <form method="get" action="reset.html">
     <button type="submit">inlog aanvragen</button>
 </form>
+    <h1>voor daan</h1>
+     <form name="adminlogin">
+            Username<input type="text" name="gebruikersnaam"/>
+            Password<input type="password" name="wachtwoord"/>
+            <input type="button" onclick="check(this.form)" value="Login"/>
+            <input type="reset" value="Cancel"/>
+        </form>
+        <script language="javascript">
+            function check(form) { /*function to check userid & password*/
+                /*the following code checkes whether the entered userid and password are matching*/
+                if(form.gebruikersnaam.value == "daan" && form.wachtwoord.value == "Daan1daan") {
+                    window.open('edit.html')/*opens the target page while Id & password matches*/
+                }
+                else {
+                    alert("niet goed ingevuld")/*displays error message*/
+                }
+            }
+        </script>
  
 </body>
 </html>
