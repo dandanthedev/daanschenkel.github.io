@@ -1,4 +1,4 @@
-Login Register
+daansite
 =============
 
-These files acompany the tutorial: [Login and Registration system with PHP](http://daveismyname.com/login-and-registration-system-with-php-bp)
+ik ben daan en dit is mijn website!
