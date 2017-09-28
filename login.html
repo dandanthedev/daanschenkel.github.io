@@ -9,7 +9,7 @@
             Username<input type="text" name="gebruikersnaam"/>
             Password<input type="password" name="wachtwoord"/>
             <input type="button" onclick="check(this.form)" value="Login"/>
-           <input type="button" value="cancel" onclick="windowClose();">
+            <a href="JavaScript:window.close()">cancel</a>
         </form>
         <script language="javascript">
             function check(form) { /*function to check userid & password*/
@@ -18,9 +18,9 @@
                     window.open('home.html')/*opens the target page while Id & password matches*/
                 }
                 else {
+            }
                     alert("niet goed ingevuld")/*displays error message*/
                 }
-            }
         </script>
         <!DOCTYPE html>
 <html>
