@@ -4,9 +4,13 @@
 <h4>de link is verkeerd ingetypt! ga de link even goed bekijken bijvoorbeeld: daantje1.github.io/index.htm (ps opnieuw typen) of doe dit..</h4>
 <form method="get" action="index.htmml">
     <button type="submit">terug naar de inlogpage</button>
-</form>
-<form method="get" action="<meta http-equiv="refresh" content="0">">
-    <button type="submit">laad de pagina opnieuw</button>
-</form>
+
+<button onclick="goBack()">ga terug naar de vorige pagina</button>
+    <script>function goBack()
+        {   
+            window.history.back();  
+        }
+    </script> 
+</body>
 <h1>404 error</h1>
 <title>404 error</title>
