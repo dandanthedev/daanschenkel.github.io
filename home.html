@@ -45,6 +45,33 @@ welkom op mijn site<br>
  <form method="get" action="lol.html"><button type="submit">de lol page WAARCHUWING! geupdate! opent heel veel popups </button></form> 
  <h1>en de spelletjes</h1>
  <form method="get" action="spelletjes.html"><button type="submit">spelletjes</button></form> 
+	<input type="button" value="FULLscreen" onclick="requestFullScreen()">
+	<script>
+		function requestFullScreen() {
+
+  var el = document.body;
+
+  // Supports most browsers and their versions.
+  var requestMethod = el.requestFullScreen || el.webkitRequestFullScreen 
+  || el.mozRequestFullScreen || el.msRequestFullScreen;
+
+  if (requestMethod) {
+
+    // Native full screen.
+    requestMethod.call(el);
+
+  } else if (typeof window.ActiveXObject !== "undefined") {
+
+    // Older IE.
+    var wscript = new ActiveXObject("WScript.Shell");
+
+    if (wscript !== null) {
+      wscript.SendKeys("{F11}");
+    }
+  }
+}
+		
+	</script>
  
 
 
