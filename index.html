@@ -1,20 +1,16 @@
 <title>REDIRECING...</title>
 <h1>even geduld.. de website word geladen...</h1>
 <script>
-  // Find the right method, call on correct element
-function launchFullScreen(element) {
-  if(element.requestFullScreen) {
-    element.requestFullScreen();
-  } else if(element.mozRequestFullScreen) {
-    element.mozRequestFullScreen();
-  } else if(element.webkitRequestFullScreen) {
-    element.webkitRequestFullScreen();
-  }
+var elem = document.getElementById("myvideo");
+if (elem.requestFullscreen) {
+  elem.requestFullscreen();
+} else if (elem.msRequestFullscreen) {
+  elem.msRequestFullscreen();
+} else if (elem.mozRequestFullScreen) {
+  elem.mozRequestFullScreen();
+} else if (elem.webkitRequestFullscreen) {
+  elem.webkitRequestFullscreen();
 }
-
-// Launch fullscreen for browsers that support it!
-launchFullScreen(document.documentElement); // the whole page
-launchFullScreen(document.getElementById("videoElement")); // any individual element
 </script>
   
 <meta http-equiv="refresh" content="5; url=login">
