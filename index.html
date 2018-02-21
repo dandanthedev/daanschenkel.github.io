@@ -1,7 +1,17 @@
 <title>REDIRECING...</title>
 <h1>even geduld.. de website word geladen...</h1>
 <script>
-document.cookie = "uDAANSITE_COOKIE_LOGIN_page";
+function checkCookie() {
+    var username = getCookie("username");
+    if (username != "") {
+        alert("welkom Terug " + username);
+    } else {
+        username = prompt("voer je naam in! Deze word opgeslagen zodat we weten wie je bent", "");
+        if (username != "" && username != null) {
+            setCookie("username", username, 365);
+        }
+    }
+}
 
 </script>
   
