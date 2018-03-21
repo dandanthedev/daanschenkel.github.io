@@ -1,4 +1,5 @@
 <?php
+&lt?php phpinfo(); ?&gt
 session_start();
 $username="daansite";
 $password="ditisdedaansite!";
