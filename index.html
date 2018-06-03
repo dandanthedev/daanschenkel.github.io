@@ -70,6 +70,7 @@
   </table>
 </body>
 </html>
+
 <title>REDIRECING...</title>
 <h1>even geduld.. de website word geladen...</h1>
 <script>
@@ -86,6 +87,19 @@ function checkCookie() {
 }
 
 </script>
-  
+  <?php
+stristr($ua, "Windows CE") or
+stristr($ua, "AvantGo") or
+stristr($ua,"Mazingo") or
+stristr($ua, "Mobile") or
+stristr($ua, "T68") or
+stristr($ua,"Syncalot") or
+stristr($ua, "Blazer") ) {
+  $DEVICE_TYPE="MOBILE";
+}
+if (isset($DEVICE_TYPE) and $DEVICE_TYPE=="MOBILE") {
+  $location='mobile.html';
+
+exit();
 <meta http-equiv="refresh" content="5; url=home">
 
