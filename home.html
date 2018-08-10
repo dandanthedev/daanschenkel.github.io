@@ -21,7 +21,17 @@
 <b>
 <font size=+2 face='Lucida Console'>
    
-<a href='index.html'logoff/uitloggen<a> | <a href="koen.html">ga naar de site van mijn vriend koen</a>| <a href='http://www.facebook.com'>Facebook</a> <br>|<form method="get" action="logout.html"><button type="submit">uitloggen</button></form> |<form method="get" action="webchat.html"><button type="submit">ga naar de webchat</button></form>|<form method="get" action="richel.html"><button type="submit">richel</button></form>  
+<a href='index.html'logoff/uitloggen<a> | <a href="koen.html">ga naar de site van mijn vriend koen</a>| <a href="#" onclick="signOut();">Uitloggen</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('Uitloggen voitooid!');
+	window.location.replace("daantje1.github.io/adres");
+    
+    });
+  }
+</script>|<form method="get" action="webchat.html"><button type="submit">ga naar de webchat</button></form>|<form method="get" action="richel.html"><button type="submit">richel</button></form>  
 </font>
 </b>
 
