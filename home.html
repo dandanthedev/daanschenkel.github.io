@@ -3,6 +3,8 @@
 <html>
 	
 <body>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+
  <script type="text/javascript" id="cookieinfo"
 	src="//cookieinfoscript.com/js/cookieinfo.min.js">
 </script>
@@ -21,17 +23,7 @@
 <b>
 <font size=+2 face='Lucida Console'>
    
-<a href='index.html'logoff/uitloggen<a> | <a href="koen.html">ga naar de site van mijn vriend koen</a>| <a href="#" onclick="signOut();">Uitloggen</a>
-<script>
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('Uitloggen voitooid!');
-	window.location.replace("daantje1.github.io/adres");
-    
-    });
-  }
-</script>|<form method="get" action="webchat.html"><button type="submit">ga naar de webchat</button></form>|<form method="get" action="richel.html"><button type="submit">richel</button></form>  
+<a href='index.html'logoff/uitloggen<a> | <a href="koen.html">ga naar de site van mijn vriend koen</a>| |<form method="get" action="webchat.html"><button type="submit">ga naar de webchat</button></form>|<form method="get" action="richel.html"><button type="submit">richel</button></form>  
 </font>
 </b>
 
@@ -60,6 +52,17 @@ welkom op mijn site<br>
 	<form method="get" action="contact">
     <button type="submit">Contact</button>
 </form>
+<a href="#" onclick="signOut();">Uitloggen</a>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('Uitloggen voitooid!');
+	window.location.replace("daantje1.github.io/adres");
+    
+    });
+  }
+</script>
 	<input type="button" value="Verberg/Bekijk tekst" onclick="requestFullScreen()">
 	<script>
 		function requestFullScreen() {
