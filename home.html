@@ -52,17 +52,13 @@ welkom op mijn site<br>
 	<form method="get" action="contact">
     <button type="submit">Contact</button>
 </form>
-<a href="#" onclick="signOut();">Uitloggen</a>
-<script>
-  function signOut() {
-    var auth2 = gapi.auth2.getAuthInstance();
-    auth2.signOut().then(function () {
-      console.log('Uitloggen voitooid!');
-	window.location.replace("daantje1.github.io/adres");
-    
-    });
-  }
+<script language="javascript" type="text/javascript">
+function windowClose() {
+window.open('','_parent','');
+window.close();
+}
 </script>
+<input type="button" value="Uitloggen" onclick="windowClose();">
 	<input type="button" value="Verberg/Bekijk tekst" onclick="requestFullScreen()">
 	<script>
 		function requestFullScreen() {
