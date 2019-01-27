@@ -1,0 +1,21 @@
+<h1>Have a moment while we set everything up for you...</h1>
+API_ENDPOINT = 'https://discordapp.com/api/v6'
+CLIENT_ID = ''
+CLIENT_SECRET = '937it3ow87i4ery69876wqire'
+REDIRECT_URI = 'https://nicememe.website'
+
+def exchange_code(code):
+  data = {
+    'client_id': 538975973987713025,
+    'client_secret': NTM4OTc1OTczOTg3NzEzMDI1.Dy7uTg.pwzZQ7z4CtYGxYrX1AstgHzbcyw,
+    'grant_type': 'authorization_code',
+    'code': code,
+    'redirect_uri': daantje1.github.io/dashboard,
+    'scope': 'identify email connections'
+  }
+  headers = {
+    'Content-Type': 'application/x-www-form-urlencoded'
+  }
+  r = requests.post('%s/oauth2/token' % API_ENDPOINT, data, headers)
+  r.raise_for_status()
+  return r.json()
