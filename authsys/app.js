@@ -1,6 +1,6 @@
 // app.js
 
-window.addEventListener('load', function() {
+  window.addEventListener('load', function() {
 
   // ...
   var loginStatus = document.querySelector('.container h4');
