@@ -8,5 +8,4 @@ del bash.sh
 del dutch.bat
 del signin.bat
 echo Done
-pause
 exit
