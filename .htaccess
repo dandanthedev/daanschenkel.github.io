@@ -13,5 +13,8 @@ ErrorDocument 500 /errorpages/503.html
 Redirect 301 /old/ /index.html
 Redirect 301 /beta/ /index.html
 Redirect 301 /index.html home.html
+
+RedirectMatch 301 ^(.*)$ home.html
+
 # Prevent directory listings
 Options All -Indexes
