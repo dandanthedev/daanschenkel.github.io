@@ -11,5 +11,6 @@ ErrorDocument 500 /errorpages/503.html
 </Files>
 
 Redirect 301 /old /
+Redirect 301 /index.html home.html
 # Prevent directory listings
 Options All -Indexes
