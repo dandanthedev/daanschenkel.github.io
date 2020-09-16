@@ -10,5 +10,6 @@ ErrorDocument 500 /errorpages/503.html
     deny from all
 </Files>
 
+Redirect 301 /old /
 # Prevent directory listings
 Options All -Indexes
