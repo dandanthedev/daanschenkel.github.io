@@ -16,9 +16,11 @@
         var authenticator = new netlify.default ({});
         authenticator.authenticate({provider:"github", scope: "user"}, function(err, data) {
           if (err) {
-            return $("#output").text("Error Authenticating with GitHub: " + err);
+            return $("#output").text("Error " + err);
           }
           $("#output").text("Authenticated with GitHub. Access Token: " + data.token);
+		  document.cookie = "log=true;"
+		  location.href = "welcome.html";
         });
       });
     });
