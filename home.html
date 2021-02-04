@@ -20,7 +20,9 @@
           }
           $("#output").text("Authenticated with GitHub. Access Token: " + data.token);
 		  document.cookie = "token=" + data.token;
-		  location.href = "welcome.html";
+		 const user = authenticator.currentUser();
+		 document.innerHTML = user;
+		//location.href = "welcome.html";
         });
       });
     });
