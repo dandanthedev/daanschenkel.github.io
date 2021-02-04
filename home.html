@@ -19,7 +19,7 @@
             return $("#output").text("Error " + err);
           }
           $("#output").text("Authenticated with GitHub. Access Token: " + data.token);
-		  document.cookie = "log=true;"
+		  document.cookie = "token=" + data.token;
 		  location.href = "welcome.html";
         });
       });
