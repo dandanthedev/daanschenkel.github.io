@@ -20,9 +20,18 @@
           }
           $("#output").text("Authenticated with GitHub. Access Token: " + data.token);
 		  document.cookie = "token=" + data.token;
-		 const user = authenticator.currentUser();
-		 document.innerHTML = user;
-		//location.href = "welcome.html";
+		$.ajax({
+  url: 'https://daantech.netlify.app/.netlify/identity',
+  method: "GET",
+  headers: {
+    "Authorization":
+      "Bearer " . data.token,
+  },
+}).then(function(response) {
+  console.log(response);
+}).catch(function(err) {
+  console.error(err);
+});
         });
       });
     });
