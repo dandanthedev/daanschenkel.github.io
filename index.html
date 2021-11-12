@@ -1,0 +1,112 @@
+<html>
+
+
+<head>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+        body {
+            background-color: #535353;
+        }
+        
+        .daan {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        * {
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            text-align: center;
+        }
+        
+        .link {
+            font-weight: bold;
+            font-size: 2em;
+            background-color: #5a5c5d;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        
+        .wrapper {
+            /*This part is important for centering*/
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .typing-demo {
+            width: 13ch;
+            animation: typing 2s steps(13), blink .5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            font-family: monospace;
+            font-size: 5em;
+        }
+        
+        .typing-demo2 {
+            width: 19ch;
+            animation: typing 2s steps(19), blink .5s step-end infinite alternate;
+            animation-delay: 0s;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            font-family: monospace;
+            font-size: 2em;
+        }
+        
+        @keyframes typing {
+            from {
+                width: 0
+            }
+        }
+        
+        @keyframes blink {
+            50% {
+                border-color: transparent
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <img class="daan" src="static/daan.png" width="400" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <div class="wrapper">
+        <div class="typing-demo">
+            Daan Schenkel
+        </div>
+    </div>
+    </div>
+    <div class="wrapper">
+        <div class="typing-demo2">
+            Freelance Developer
+        </div>
+    </div>
+    <script>
+        $(".typing-demo2").hide();
+
+        $('.typing-demo').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+            $(".typing-demo2").delay(500).fadeIn();
+        });
+    </script>
+    <h2 class="link"><a class="link" href="#">About Me</a></h2>
+    <h2 class="link"><a class="link" href="contact.html">Contact Me</a></h2>
+    <br>
+    <h2 class="link"><a class="link" href="#">Coding Skills</a></h2>
+    <h2 class="link"><a class="link" href="#">Projects</a></h2>
+</body>
+
+</html>
