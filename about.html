@@ -43,8 +43,8 @@
         }
         
         .typing-demo {
-            width: 10ch;
-            animation: typing 1s steps(10), blink .5s step-end infinite alternate;
+            width: 8ch;
+            animation: typing 1s steps(8), blink .5s step-end infinite alternate;
             white-space: nowrap;
             overflow: hidden;
             border-right: 3px solid;
@@ -53,14 +53,21 @@
         }
         
         .typing-demo2 {
-            width: 25ch;
-            animation: typing 2s steps(25), blink .5s step-end infinite alternate;
+            width: 23ch;
+            animation: typing 2s steps(23), blink .5s step-end infinite alternate;
             animation-delay: 0s;
             white-space: nowrap;
             overflow: hidden;
             border-right: 3px solid;
             font-family: monospace;
             font-size: 2em;
+        }
+        
+        .backstory {
+            animation-delay: 0s;
+            font-family: monospace;
+            font-size: 2em;
+            overflow-wrap: break-word;
         }
         
         @keyframes typing {
@@ -87,27 +94,28 @@
 
     <div class="wrapper">
         <div class="typing-demo">
-            Contact Me
+            About Me
         </div>
     </div>
     </div>
     <div class="wrapper">
         <div class="typing-demo2">
-            Oh, you want to stalk me?
+            Yes, im a crazy person.
         </div>
     </div>
-    <h2 class="link"><a class="link" href="https://twitter.com/DaanSchenkel_">Twitter</a></h2>
-    <h2 class="link"><a class="link" href="https://instagram.com/DaanSchenkel_">Instagram</a></h2>
-    <h2 class="link"><a class="link" href="https://reddit.com/DaanTech">Reddit</a></h2>
-    <h2 class="link"><a class="link" href="https://www.youtube.com/channel/UC0THk1jCa4_7Kr9qSUki9lA">YouTube</a></h2>
-    <h2 class="link"><a class="link" href="https://steamcommunity.com/id/daanschenkel">Steam</a></h2>
-    <h2 class="link"><a class="link" href="javascript:alert('no, just no');">TikTok</a></h2>
-    <h2 class="link"><a class="link" href="https://www.facebook.com/profile.php?id=100074276337763">Facebook</a></h2>
-    <h2 class="link"><a class="link" href="mailto:daan@daanschenkel.nl">Mail Me</a></h2>
-    <br>
+    <div class="backstory">
+        <br> Hi! Im Daan Schenkel, i like to code (obviously), but i also like to sing and do athletics. I live in The Netherlands. I also grew up and go to school there. My high school is the Harens Lyceum. I quickly discovered my obsession to everything
+        tech related, i found out when i was about 5-6. I (also at that age) made my first website, which you can view by clicking on the link below.
+    </div>
+    <h2 class="link"><a class="link" href="https://daanschenkel.wixsite.com/daan">My First Website</a></h2>
+    <h2 class="link"><a class="link" href="https://instagr.am/DaanSchenkel_">My First Website</a></h2>
+    <h2 class="link"><a class="link" href="https://daanschenkel.wixsite.com/daan">My First Website</a></h2>
+    <h2 class="link"><a class="link" href="https://daanschenkel.wixsite.com/daan">My First Website</a></h2>
+
     <h2 class="link"><a class="link" href="index.html">Back</a></h2>
     <script>
         $(".typing-demo2").hide();
+        $(".backstory").hide();
         $(".link").hide();
 
 
@@ -116,6 +124,7 @@
             $(".typing-demo2").delay(500).fadeIn();
         });
         $('.typing-demo2').one("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function() {
+            $(".backstory").delay(500).fadeIn();
             $(".link").delay(500).fadeIn();
         });
     </script>
